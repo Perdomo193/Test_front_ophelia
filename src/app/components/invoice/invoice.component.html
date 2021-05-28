@@ -1,0 +1,107 @@
+<div class="row d-flex justify-content-center">
+  
+  <h1 class="text-center">Sistema de facturación Ophelia</h1>
+  
+  <table class="table w-75 text-center">
+    <thead>
+      <tr>
+        <th scope="col">N° producto</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Unidades</th>
+        <th scope="col">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+          <td>
+            <select [(ngModel)] ="product1" class="form-select" aria-label="Default select example">
+              <option [value]="items.id" *ngFor="let items of datos">{{items.name}}</option>
+            </select>
+          </td>
+          
+          <td><input type="number" class="form-control" [(ngModel)] ="value1" placeholder="Cantidad"></td>
+          <td><input type="number" class="form-control" [(ngModel)] ="price1" placeholder="Precio"></td>
+      </tr>
+      
+      <tr>
+        <th scope="row">2</th>
+          <td>
+            <select [(ngModel)] ="product2" class="form-select" aria-label="Default select example">
+              <option [value]="items.id" *ngFor="let items of datos">{{items.name}}</option>
+            </select>
+          </td>
+          
+          <td><input type="number" class="form-control" [(ngModel)] ="value2" placeholder="Cantidad"></td>
+          <td><input type="number" class="form-control" [(ngModel)] ="price2" placeholder="Precio"></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+          <td>
+            <select [(ngModel)] ="product3" class="form-select" aria-label="Default select example">
+              <option [value]="items.id" *ngFor="let items of datos">{{items.name}}</option>
+            </select>
+          </td>
+          
+          <td><input type="number" class="form-control" [(ngModel)] ="value3" placeholder="Cantidad"></td>
+          <td><input type="number" class="form-control" [(ngModel)] ="price3" placeholder="Precio"></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+          <td>
+            <select [(ngModel)] ="product4" class="form-select" aria-label="Default select example">
+              <option [value]="items.id" *ngFor="let items of datos">{{items.name}}</option>
+            </select>
+          </td>
+          
+          <td><input type="number" class="form-control" [(ngModel)] ="value4" placeholder="Cantidad"></td>
+          <td><input type="number" class="form-control" [(ngModel)] ="price4" placeholder="Precio"></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+          <td>
+            <select [(ngModel)] ="product5" class="form-select" aria-label="Default select example">
+              <option [value]="items.id" *ngFor="let items of datos">{{items.name}}</option>
+            </select>
+          </td>
+          
+          <td><input type="number" class="form-control" [(ngModel)]="value5" placeholder="Cantidad"></td>
+          <td><input type="number" class="form-control" [(ngModel)] ="price5" placeholder="Precio"></td>
+      </tr>
+      <tr>
+        <th scope="row">Total</th>
+        <td></td>
+        <td></td>
+        <td>{{ result }}</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td>
+          <button type="button" class="btn btn-primary" >Calcular</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Nombre</th>
+        <td><input type="text" class="form-control" [(ngModel)]="name" placeholder="Nombre"></td>
+        <td><input type="text" class="form-control" [(ngModel)]="age" placeholder="Edad"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Fecha</th>
+        <td><input type="text" class="form-control" [(ngModel)]="day" placeholder="Dia"></td>
+        <td><input type="text" class="form-control" [(ngModel)]="month" placeholder="Mes"></td>
+        <td><input type="text" class="form-control" [(ngModel)]="year" placeholder="Año"></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td><button type="button" class="btn btn-primary" (click)="generate()">Generar factura</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
